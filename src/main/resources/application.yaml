@@ -1,0 +1,53 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+#    url: jdbc:mysql://127.0.0.1/sell?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://192.168.43.132/sell?characterEncoding=utf-8&useSSL=false
+    #password: 123456
+    #url: jdbc:mysql://192.168.0.113/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.43.132
+    port: 6379
+
+#    hibernate:
+#      ddl-auto: update
+server:
+  context-path: /sell
+  port: 80
+
+logging:
+  level:
+    com.imooc.dataobject.mapper: trace
+#  pattern:
+#    console: "%d - %msg%n"
+#  #path: E:/workspace/r1l5jr/log
+#  file: E:/workspace/r1l5jr/log/sell.log
+#  level:
+#    com.imooc.LoggerTest: debug
+
+wechat:
+  mpAppId: wxd2ee709a9055076c
+  mpAppSecret: 6e1f267bf2c3bf61922829784f9ac7b8
+  openAppId: wx329sidf2j9fjisdh98a
+  openAppSecret: 98fijew9ui29sio32rewafw35tg54grt
+  mchId: 1409146202
+  mchKey: c976503d34ca432c601361f969fd8d85
+  keyPath: E:\workspace\r1l5jr\key
+  notifyUrl: http://xxx.com
+  templateId:
+    orderStatus: 5sd67ufisdf678usoidf8i
+
+projectUrl:
+  wechatMpAuthorize: http://ssss.com
+  wechatOpenAuthorize: http://ssss.com
+  sell: http://localhost
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  #type-aliases-package:
+
